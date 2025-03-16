@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<!-- saved from url=(0069)file:///Users/lokeshsharma/html%20first/HTML.tutorial/promohive2.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PromoHive - Reserve Your ID</title>
+    <link href="./PromoHive - Reserve Your ID_files/css2" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            background: linear-gradient(135deg, #1e1e2f, #3a3a62);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            transition: 0.3s;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            width: 350px;
+        }
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            color: #ffcc00;
+            margin-bottom: 10px;
+        }
+        h1 {
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 14px;
+            margin-bottom: 20px;
+            opacity: 0.8;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .btn {
+            background: #ff8c00;
+            color: white;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .btn:hover {
+            background: #e67e00;
+        }
+        .footer {
+            margin-top: 15px;
+            font-size: 12px;
+            opacity: 0.7;
+        }
+        .message-container {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+        }
+        .message-container h2 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #ffcc00;
+        }
+        .message-container p {
+            font-size: 16px;
+            color: #ffffff;
+        }
+        .social-links {
+            margin-top: 15px;
+        }
+        .social-links a {
+            color: #ffcc00;
+            text-decoration: none;
+            margin: 5px;
+            font-weight: 600;
+        }
+        .dark-mode {
+            background: linear-gradient(135deg, #ffffff, #e0e0e0);
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="mainContainer">
+        <div class="logo">🐝 PromoHive</div>
+        <h1>🚀 PromoHive</h1>
+        <p>Be the first to reserve your ID before we launch! 🌟</p>
+        <input type="email" id="email" placeholder="Enter your email" required="">
+        <button class="btn" onclick="reserveID()">Reserve My ID</button>
+        <button class="btn" onclick="toggleDarkMode()">🌙 Toggle Dark Mode</button>
+        <div class="social-links">
+            <a href="https://www.instagram.com/lokeshx__21/" target="_blank">📸 Instagram</a>
+        </div>
+        <p class="footer">No spam. Just updates on our launch! 🎉</p>
+    </div>
+
+    <div class="container message-container" id="messageContainer">
+        <h2>🎉 Now You Can Connect When We Launch!</h2>
+        <p>Thank you for joining us! Stay tuned for updates. - Lokesh Sharma 🤗🙏</p>
+    </div>
+
+    <script>
+        function reserveID() {
+            const email = document.getElementById('email').value;
+            if (email) {
+                document.getElementById('mainContainer').style.display = 'none';
+                document.getElementById('messageContainer').style.display = 'flex';
+                alert(`You have successfully reserved your ID!`);
+            } else {
+                alert("Please enter a valid email address.");
+            }
+        }
+
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark-mode");
+        }
+    </script>
+
+
+</body></html>
